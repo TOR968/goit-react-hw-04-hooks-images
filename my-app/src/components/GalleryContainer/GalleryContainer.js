@@ -31,20 +31,30 @@ function GalleryContainer() {
   //   };
   //   fetchRequest();
   // }, []);
+  // const fetchRequest = useCallback(() => {
+  //   async () => {
+  //     try {
+  //       const response = await get(query, page);
+  //       return response.data.hits;
+  //     } catch (error) {
+  //       setError(true);
+  //     }
+  //   };
+  // }, [page, query]);
+  //  fetchRequest();
 
-
-  const fetchRequest = useCallback(() => {
-    async () => {
-      try {
-        const response = await get(query, page);
-        return response.data.hits;
-      } catch (error) {
-        setError(true);
-      }
-    }, [] );
-useEffect(() => {
-  fetchRequests()
-}, [fetchRequest])
+  //   const fetchRequest = useCallback(() => {
+  //     async () => {
+  //       try {
+  //         const response = await get(query, page);
+  //         return response.data.hits;
+  //       } catch (error) {
+  //         setError(true);
+  //       }
+  //     }, [] );
+  // useEffect(() => {
+  //   fetchRequests()
+  // }, [fetchRequest])
 
   useEffect(() => {
     setIsLoading(true);
