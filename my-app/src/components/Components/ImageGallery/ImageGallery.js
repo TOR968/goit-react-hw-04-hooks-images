@@ -6,9 +6,9 @@ function ImageGallery({ gallery }) {
   return (
     <>
       <ul className={s.ImageGallery}>
-        {gallery.map(({ id, webformatURL, largeImageURL, tags }) => (
+        {gallery.map(({ imageSize, webformatURL, largeImageURL, tags }) => (
           <ImageGalleryItem
-            key={id}
+            key={imageSize}
             url={webformatURL}
             alt={tags}
             largeImageURL={largeImageURL}
